@@ -1,27 +1,34 @@
 {{ block title }}Receiver Experiment{{ endblock }}
 
 {{ block styles }}
-<link rel="stylesheet" href="{{ static 'receiver_experiment/experiment.css' }}">
+<link rel="stylesheet" href="{{ static 'receiver_experiment/experiment.css' }}?v=iq-timer-clear-1">
 {{ endblock }}
 
 {{ block content }}
-<main class="app-shell">
-    <section class="experiment-card">
-        <div class="card-topline">
-            <span>{{ phase_label }}</span>
-            <span>{{ screen_counter }}</span>
+<style>
+    div.otree-timer.alert.alert-warning {
+        display: none !important;
+    }
+</style>
+
+<main class="app-shell iq-app-shell">
+    <section class="experiment-card iq-card">
+        <div class="iq-topbar">
+            <div class="iq-progress-group">
+                <div class="progress-track" aria-hidden="true">
+                    <div class="progress-fill" style="width: {{ progress_percent }}%;"></div>
+                </div>
+                <span class="iq-screen-counter">{{ screen_counter }}</span>
+            </div>
+
+            <div class="iq-timer iq-timer-corner" data-remaining="{{ remaining_seconds }}">
+                <span class="iq-timer-label">Time remaining</span>
+                <span class="iq-timer-value">10:00</span>
+            </div>
         </div>
 
-        <div class="progress-track" aria-hidden="true">
-            <div class="progress-fill" style="width: {{ progress_percent }}%;"></div>
-        </div>
-
-        <div class="screen-content">
-            <span class="eyebrow">Raven Matrix</span>
-            <h1>Question {{ item.item_number }} of 10</h1>
-            <p class="iq-question-id">Item reference: {{ item.question_id }}</p>
-            <p>{{ item.prompt }}</p>
-
+        <div class="screen-content iq-screen-content">
+            <h1 class="iq-heading">Question {{ item.item_number }} of 10</h1>
             <div class="matrix-panel raven-panel">
                 <img class="raven-stem" src="{{ static item.stem_path }}" alt="{{ item.question_id }} matrix">
             </div>
@@ -47,4 +54,33 @@
         </div>
     </section>
 </main>
+
+<script>
+    (() => {
+        document
+            .querySelectorAll('div.otree-timer.alert.alert-warning')
+            .forEach((timer) => timer.style.setProperty('display', 'none', 'important'));
+
+        const timer = document.querySelector('.iq-timer');
+        if (!timer) return;
+        const value = timer.querySelector('.iq-timer-value');
+        let remaining = Number(timer.dataset.remaining || 0);
+
+        const render = () => {
+            const minutes = Math.floor(remaining / 60);
+            const seconds = remaining % 60;
+            value.textContent = `${minutes}:${String(seconds).padStart(2, '0')}`;
+        };
+
+        render();
+        const interval = setInterval(() => {
+            if (remaining <= 0) {
+                clearInterval(interval);
+                return;
+            }
+            remaining -= 1;
+            render();
+        }, 1000);
+    })();
+</script>
 {{ endblock }}

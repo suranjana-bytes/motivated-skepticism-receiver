@@ -29,6 +29,16 @@ body {
     background-attachment: fixed;
 }
 
+.otree-timer,
+.otree-timer.alert.alert-warning {
+    display: none !important;
+}
+
+.alert-warning:has(.otree-timer__time-left),
+.alert-warning:has([class*="otree-timer"]) {
+    display: none !important;
+}
+
 .otree-body {
     max-width: none;
     padding: 0;
@@ -43,6 +53,13 @@ body {
     display: grid;
     place-items: center;
     padding: 42px 22px;
+}
+
+.iq-app-shell {
+    height: 100vh;
+    min-height: 0;
+    padding: 2px 8px;
+    overflow: hidden;
 }
 
 .experiment-card {
@@ -358,6 +375,94 @@ p {
     letter-spacing: 0.02em;
 }
 
+.iq-card {
+    width: min(980px, calc(100vw - 48px));
+    max-height: calc(100vh - 4px);
+    display: flex;
+    flex-direction: column;
+    padding: 14px 18px 12px;
+    border-radius: 18px;
+}
+
+.iq-screen-content {
+    padding: 4px 0 2px;
+}
+
+.iq-card .card-topline {
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+}
+
+.iq-card .progress-track {
+    height: 7px;
+}
+
+.iq-topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.iq-progress-group {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+}
+
+.iq-screen-counter {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.iq-timer {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    justify-self: end;
+    padding: 7px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(185, 98, 53, 0.3);
+    background: linear-gradient(180deg, rgba(255, 243, 232, 0.98), rgba(248, 223, 203, 0.88));
+    color: var(--primary-dark);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    box-shadow:
+        0 12px 24px rgba(185, 98, 53, 0.16),
+        0 0 0 4px rgba(185, 98, 53, 0.08);
+}
+
+.iq-timer-corner {
+    position: static;
+    z-index: 2;
+}
+
+.iq-timer-label {
+    text-transform: uppercase;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+}
+
+.iq-timer-value {
+    min-width: 3.4rem;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-size: 1rem;
+    color: #9f341d;
+}
+
+.iq-heading {
+    font-size: 1.32rem;
+    margin: 2px 0 6px;
+}
+
 .info-list {
     margin: 20px 0 0;
     padding-left: 24px;
@@ -503,34 +608,129 @@ p {
     box-shadow: 0 18px 34px rgba(185, 98, 53, 0.14);
 }
 
+.receiver-input-screen {
+    display: grid;
+    place-items: center;
+    min-height: 520px;
+    padding: 44px 0 30px;
+}
+
+.receiver-input-panel {
+    width: min(720px, 100%);
+    min-height: 500px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    padding: 42px 46px;
+    border: 3px solid rgba(229, 229, 35, 0.95);
+    background: rgba(238, 238, 237, 0.84);
+    text-align: center;
+}
+
+.receiver-round-heading {
+    margin: 0 0 34px;
+    font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.receiver-status-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 62px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(104, 74, 50, 0.16);
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: 0 8px 18px rgba(79, 52, 34, 0.06);
+}
+
+.receiver-status-label {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.receiver-status-badge {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.receiver-input-copy {
+    max-width: 520px;
+}
+
+.receiver-input-copy p {
+    margin-bottom: 14px;
+    font-size: 1.02rem;
+    line-height: 1.55;
+}
+
+.receiver-message-quote {
+    margin: 18px 0 24px;
+    font-weight: 700;
+}
+
+.receiver-guess-input {
+    width: 76px;
+    height: 34px;
+    margin-top: -6px;
+    border: 2px solid rgba(93, 87, 153, 0.42);
+    background: #d8d4ff;
+    color: var(--text);
+    font: inherit;
+    font-size: 1.05rem;
+    text-align: center;
+    box-shadow: inset 0 1px 2px rgba(47, 36, 29, 0.16);
+}
+
+.receiver-input-hint {
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+}
+
 .matrix-panel {
     display: grid;
-    gap: 12px;
-    margin-top: 18px;
-    padding: 18px;
-    border-radius: 24px;
+    gap: 4px;
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 16px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 249, 242, 0.7));
     border: 1px solid var(--border);
     box-shadow: var(--shadow-soft);
 }
 
 .raven-panel {
-    padding: 18px;
+    padding: 10px;
 }
 
 .raven-stem {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    height: 220px;
+    max-height: 220px;
+    margin: 0 auto;
     display: block;
-    border-radius: 18px;
+    border-radius: 12px;
     background: white;
     box-shadow: 0 12px 30px rgba(79, 52, 34, 0.08);
+    object-fit: contain;
 }
 
 .iq-options {
-    margin-top: 18px;
+    margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+    border-radius: 14px;
 }
 
 .iq-option {
@@ -546,12 +746,13 @@ p {
 
 .iq-option-card {
     display: block;
+    position: relative;
     height: 100%;
-    padding: 14px;
-    border-radius: 20px;
+    padding: 6px;
+    border-radius: 12px;
     border: 1px solid rgba(104, 74, 50, 0.14);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 249, 242, 0.78));
-    box-shadow: 0 12px 26px rgba(79, 52, 34, 0.06);
+    box-shadow: 0 6px 14px rgba(79, 52, 34, 0.05);
     transition:
         transform 180ms ease,
         box-shadow 180ms ease,
@@ -560,48 +761,52 @@ p {
 }
 
 .iq-option:hover .iq-option-card {
-    transform: translateY(-2px);
-    box-shadow: 0 18px 32px rgba(79, 52, 34, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(79, 52, 34, 0.08);
 }
 
 .iq-option input:checked + .iq-option-card {
     border-color: rgba(185, 98, 53, 0.45);
     background: linear-gradient(180deg, rgba(244, 224, 207, 0.9), rgba(255, 249, 242, 0.9));
-    box-shadow: 0 18px 34px rgba(185, 98, 53, 0.14);
+    box-shadow: 0 10px 18px rgba(185, 98, 53, 0.12);
 }
 
 .iq-option-head {
+    position: absolute;
+    top: 7px;
+    left: 7px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
+    z-index: 1;
 }
 
 .iq-option-letter {
-    width: 34px;
-    height: 34px;
+    width: 20px;
+    height: 20px;
     display: inline-grid;
     place-items: center;
     border-radius: 999px;
-    background: rgba(47, 92, 103, 0.1);
+    background: rgba(255, 255, 255, 0.9);
     color: var(--secondary);
+    font-size: 0.76rem;
     font-weight: 700;
     flex: 0 0 auto;
 }
 
 .iq-option-name {
-    font-size: 0.98rem;
-    font-weight: 700;
-    color: var(--muted);
+    display: none;
 }
 
 .iq-option-image {
     display: block;
-    width: 100%;
-    aspect-ratio: 1.45 / 1;
+    width: auto;
+    max-width: 100%;
+    height: 112px;
+    max-height: 112px;
+    margin: 0 auto;
     object-fit: contain;
-    padding: 10px;
-    border-radius: 14px;
+    padding: 0;
+    border-radius: 5px;
     background: white;
     border: 1px solid rgba(104, 74, 50, 0.12);
 }
@@ -629,7 +834,7 @@ p {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
-    padding-top: 18px;
+    padding-top: 5px;
 }
 
 .btn-primary {
@@ -649,6 +854,12 @@ p {
         filter 180ms ease;
 }
 
+.iq-card .btn-primary {
+    padding: 10px 24px;
+    font-size: 0.98rem;
+    box-shadow: 0 8px 16px rgba(185, 98, 53, 0.18);
+}
+
 .btn-primary:hover {
     transform: translateY(-1px);
     box-shadow: 0 18px 34px rgba(185, 98, 53, 0.28);
@@ -659,6 +870,16 @@ p {
     .experiment-card {
         padding: 24px;
         border-radius: 24px;
+    }
+
+    .iq-card {
+        padding: 12px 8px 6px;
+        border-radius: 12px;
+    }
+
+    .iq-topbar {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 
     .card-topline {
@@ -674,6 +895,11 @@ p {
     }
 
     .iq-options {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 3px;
+    }
+
+    .iq-timer-corner {
+        justify-self: end;
     }
 }
