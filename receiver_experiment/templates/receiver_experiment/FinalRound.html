@@ -1,0 +1,30 @@
+{{ block title }}Receiver Experiment{{ endblock }}
+
+{{ block styles }}
+<link rel="stylesheet" href="{{ static 'receiver_experiment/experiment.css' }}?v=sparkle-colors-1">
+{{ endblock }}
+
+{{ block content }}
+<main class="app-shell">
+    <section class="experiment-card thank-you-card">
+        <div class="pixel-sparkles" aria-hidden="true">
+            <span class="pixel-sparkle sparkle-1"></span>
+            <span class="pixel-sparkle sparkle-2"></span>
+            <span class="pixel-sparkle sparkle-3"></span>
+            <span class="pixel-sparkle sparkle-4"></span>
+            <span class="pixel-sparkle sparkle-5"></span>
+            <span class="pixel-sparkle sparkle-6"></span>
+            <span class="pixel-sparkle sparkle-7"></span>
+            <span class="pixel-sparkle sparkle-8"></span>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" style="width: {{ progress_percent }}%;"></div>
+        </div>
+
+        <div class="screen-content thank-you-content">
+            <h1 class="thank-you-heading">Thank You!</h1>
+        </div>
+    </section>
+</main>
+{{ endblock }}
