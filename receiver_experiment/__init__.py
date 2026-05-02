@@ -34,19 +34,34 @@ RAVEN_PARTICIPANT_PERFORMANCE_DATA = [
     dict(sender_id=15, items=100, correct=37),
 ]
 SENDER_DECISION_DATA = [
-    dict(sender_id=1, status="Low Status", rounds=[dict(type_number=2, message="{1, 2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=2, message="{2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1}"), dict(type_number=1, message="{1}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=2, message="{1, 2}")]),
-    dict(sender_id=3, status="Low Status", rounds=[dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1}"), dict(type_number=1, message="{1}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1}"), dict(type_number=1, message="{1}"), dict(type_number=1, message="{1}"), dict(type_number=2, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1}")]),
-    dict(sender_id=4, status="Low Status", rounds=[dict(type_number=1, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=1, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=2, message="{1, 2}")]),
-    dict(sender_id=6, status="Low Status", rounds=[dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{3}"), dict(type_number=1, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=3, message="{2, 3}"), dict(type_number=2, message="{2}"), dict(type_number=3, message="{3}"), dict(type_number=1, message="{1}")]),
-    dict(sender_id=7, status="Low Status", rounds=[dict(type_number=3, message="{3}"), dict(type_number=3, message="{2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{2, 3}"), dict(type_number=1, message="{1}"), dict(type_number=1, message="{1, 2}"), dict(type_number=3, message="{3}"), dict(type_number=3, message="{3}"), dict(type_number=3, message="{3}"), dict(type_number=1, message="{1}")]),
-    dict(sender_id=9, status="Low Status", rounds=[dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1}"), dict(type_number=2, message="{2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{2, 3}"), dict(type_number=2, message="{1, 2, 3}")]),
-    dict(sender_id=11, status="High Status", rounds=[dict(type_number=1, message="{1}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{2, 3}"), dict(type_number=2, message="{1, 2, 3}")]),
-    dict(sender_id=13, status="High Status", rounds=[dict(type_number=1, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}")]),
-    dict(sender_id=14, status="High Status", rounds=[dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1, 2}"), dict(type_number=3, message="{2, 3}"), dict(type_number=3, message="{2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=2, message="{1, 2, 3}")]),
-    dict(sender_id=15, status="High Status", rounds=[dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=3, message="{2, 3}"), dict(type_number=3, message="{2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{2, 3}")]),
-    dict(sender_id=16, status="High Status", rounds=[dict(type_number=1, message="{1}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1}")]),
-    dict(sender_id=17, status="High Status", rounds=[dict(type_number=1, message="{1}"), dict(type_number=2, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1}"), dict(type_number=1, message="{1}")]),
-    dict(sender_id=18, status="High Status", rounds=[dict(type_number=1, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=1, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=1, message="{1, 2, 3}"), dict(type_number=3, message="{1, 2, 3}"), dict(type_number=2, message="{1, 2}"), dict(type_number=2, message="{1, 2}"), dict(type_number=3, message="{1, 2, 3}")]),
+    dict(sender_id=1, status='Low Status', rounds=[dict(type_number=2, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}')]),
+    dict(sender_id=3, status='Low Status', rounds=[dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=4, status='Low Status', rounds=[dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}')]),
+    dict(sender_id=6, status='Low Status', rounds=[dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{3}'), dict(type_number=1, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{2}'), dict(type_number=3, message='{3}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=7, status='Low Status', rounds=[dict(type_number=3, message='{3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{3}'), dict(type_number=3, message='{3}'), dict(type_number=3, message='{3}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=9, status='Low Status', rounds=[dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2, 3}')]),
+    dict(sender_id=11, status='High Status', rounds=[dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2, 3}')]),
+    dict(sender_id=13, status='High Status', rounds=[dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}')]),
+    dict(sender_id=14, status='High Status', rounds=[dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2, 3}')]),
+    dict(sender_id=15, status='High Status', rounds=[dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}')]),
+    dict(sender_id=16, status='High Status', rounds=[dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=17, status='High Status', rounds=[dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=18, status='High Status', rounds=[dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}')]),
+    dict(sender_id=19, status='High Status', rounds=[dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{2, 3}')]),
+    dict(sender_id=20, status='High Status', rounds=[dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}')]),
+    dict(sender_id=21, status='High Status', rounds=[dict(type_number=3, message='{3}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=22, status='High Status', rounds=[dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{3}'), dict(type_number=2, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=23, status='Low Status', rounds=[dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{2, 3}'), dict(type_number=1, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=24, status='High Status', rounds=[dict(type_number=1, message='{1}'), dict(type_number=1, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=3, message='{1, 2, 3}')]),
+    dict(sender_id=25, status='High Status', rounds=[dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}')]),
+    dict(sender_id=26, status='Low Status', rounds=[dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2}')]),
+    dict(sender_id=27, status='Low Status', rounds=[dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{2, 3}'), dict(type_number=3, message='{1, 2, 3}')]),
+    dict(sender_id=28, status='High Status', rounds=[dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{2, 3}')]),
+    dict(sender_id=29, status='Low Status', rounds=[dict(type_number=2, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=2, message='{1, 2}')]),
+    dict(sender_id=30, status='Low Status', rounds=[dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=31, status='Low Status', rounds=[dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{1, 2, 3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=2, message='{1, 2}')]),
+    dict(sender_id=32, status='Low Status', rounds=[dict(type_number=2, message='{1, 2}'), dict(type_number=1, message='{1, 2}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{3}'), dict(type_number=1, message='{1, 2}'), dict(type_number=1, message='{1}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{2}'), dict(type_number=3, message='{3}'), dict(type_number=1, message='{1}')]),
+    dict(sender_id=33, status='Low Status', rounds=[dict(type_number=3, message='{3}'), dict(type_number=3, message='{2, 3}'), dict(type_number=2, message='{1, 2}'), dict(type_number=3, message='{2, 3}'), dict(type_number=1, message='{1}'), dict(type_number=1, message='{1, 2}'), dict(type_number=3, message='{3}'), dict(type_number=3, message='{3}'), dict(type_number=3, message='{3}'), dict(type_number=1, message='{1}')]),
 ]
 
 
@@ -890,6 +905,70 @@ class StudyComplete(Page):
             screen_counter="Completed",
             progress_percent=(50 / C.TOTAL_EXPERIMENT_SCREENS) * 100,
         )
+
+
+def first_non_empty_value(players, field_name: str):
+    for player in players:
+        value = player.field_maybe_none(field_name)
+        if value not in (None, ""):
+            return value
+    return ""
+
+
+def custom_export(players):
+    players = list(players)
+    header = [
+        "participant_id",
+        "iq_score",
+        "iq_rate",
+        "age",
+        "gender",
+        "education_level",
+    ]
+    for round_number in range(1, C.NUM_ROUNDS + 1):
+        header.extend(
+            [
+                f"round_{round_number}_iq_rank",
+                f"round_{round_number}_sender_status",
+                f"round_{round_number}_sender_message",
+                f"round_{round_number}_receiver_guess",
+            ]
+        )
+    yield header
+
+    participant_codes = sorted({player.participant.code for player in players})
+    for participant_code in participant_codes:
+        participant_players = [
+            player for player in players if player.participant.code == participant_code
+        ]
+        participant_players.sort(key=lambda player: player.round_number)
+        players_by_round = {
+            player.round_number: player for player in participant_players
+        }
+        first_player = participant_players[0]
+        score = iq_score(first_player)
+        row = [
+            participant_code,
+            score,
+            f"{score / len(C.IQ_ITEMS):.3f}",
+            first_non_empty_value(participant_players, "age"),
+            first_non_empty_value(participant_players, "gender"),
+            first_non_empty_value(participant_players, "education_level"),
+        ]
+        for round_number in range(1, C.NUM_ROUNDS + 1):
+            round_player = players_by_round.get(round_number)
+            if round_player:
+                row.extend(
+                    [
+                        round_player.field_maybe_none("sender_number") or "",
+                        round_player.field_maybe_none("sender_status") or "",
+                        round_player.field_maybe_none("sender_message") or "",
+                        round_player.field_maybe_none("guess") or "",
+                    ]
+                )
+            else:
+                row.extend(["", "", "", ""])
+        yield row
 
 
 page_sequence = [
