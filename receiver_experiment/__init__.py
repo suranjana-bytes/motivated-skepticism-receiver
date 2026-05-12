@@ -73,7 +73,6 @@ class C(BaseConstants):
     TOTAL_EXPERIMENT_SCREENS = 50
     NUMBER_CHOICES = [1, 2, 3]
     STATUS_CHOICES = ["High Status", "Low Status"]
-    POINTS_FOR_CORRECT_GUESS = cu(1)
     IQ_OPTION_VALUES = ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8"]
     AGE_CHOICES = list(range(18, 101))
     EDUCATION_LEVELS = [
@@ -666,8 +665,8 @@ class Part2Intro(StaticInfoPage):
             heading="Part 2",
             paragraphs=[],
             instruction_lines=[
-                dict(text="Part 2 consists of 10 rounds of a 2-player game. A sender and a reciever.", css_class=""),
-                dict(text="Today you are a Reciever!", css_class="emphasis-line"),
+                dict(text="Part 2 consists of 10 rounds of a 2-player game. A sender and a receiver.", css_class=""),
+                dict(text="Today you are a Receiver!", css_class="emphasis-line"),
                 dict(text="You will be randomly matched with a sender, you will never know the identity of the other player and this player can be new in each round.", css_class=""),
             ],
             button_label="Next",
@@ -696,8 +695,8 @@ class IQTransition(StaticInfoPage):
                 dict(text="⋄ Step 1: The same IQ-test that you did earlier was also done by a large number of previous participants. In each round of the game, the computer randomly selects 2 previous participants. Together with these participants, you will form a group of 3 participants. Within this group, the computer program compares the performances in the IQ-test. It will then compute your IQ-rank for the round as follows:", css_class=""),
                 dict(text="", css_class="spacer-line"),
                 dict(text="⋄ If you have the highest performance in the group of 3, your IQ-rank will be 1.", css_class=""),
-                dict(text="⋄ If you have the second highest perfance in the group of 3, your IQ-rank will be 2.", css_class=""),
-                dict(text="⋄ If you have the lowest perfance in the group of 3, your IQ-rank will be 3.", css_class=""),
+                dict(text="⋄ If you have the second highest performance in the group of 3, your IQ-rank will be 2.", css_class=""),
+                dict(text="⋄ If you have the lowest performance in the group of 3, your IQ-rank will be 3.", css_class=""),
                 dict(text="⋄ If you have the same performance as other participants in the group, the computer program randomly decides the ranking between these participants and yourself.", css_class=""),
                 dict(text="", css_class="spacer-line"),
                 dict(text="In each round, your IQ-rank will be 1, 2 or 3. The higher your IQ-rank, the worse you performed in the IQ-test relative to the other participants.", css_class=""),
@@ -837,11 +836,7 @@ class ReceiverDecision(Page):
 
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
-        player.payoff = (
-            C.POINTS_FOR_CORRECT_GUESS
-            if player.guess == player.sender_number
-            else cu(0)
-        )
+        player.payoff = cu(3 - abs(player.guess - player.sender_number))
 
 
 class DemographicsIntro(StaticInfoPage):
