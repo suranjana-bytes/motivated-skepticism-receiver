@@ -10,6 +10,13 @@ SESSION_CONFIGS = [
     ),
 ]
 
+ROOMS = [
+    dict(
+        name="receiver_loaded_20260512",
+        display_name="Receiver Loaded 2026-05-12",
+    ),
+]
+
 SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00,
     participation_fee=0.00,
@@ -34,6 +41,6 @@ DEMO_PAGE_INTRO_HTML = """
 </p>
 """
 
-SECRET_KEY = "receiver-experiment-secret-key"
+SECRET_KEY = environ.get("SECRET_KEY", "receiver-experiment-secret-key")
 
 INSTALLED_APPS = ["otree"]
